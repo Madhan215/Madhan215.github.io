@@ -55,7 +55,7 @@
 /* Mobile Phone */
 @media (max-width: 576px){
     html{
-        font-size: 40%;
+        font-size: 35%;
     }
 
     .simply-countdown > .simply-section {
