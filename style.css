@@ -1,0 +1,45 @@
+:root {
+    --pink : #f14e95;
+    --shadow : 0 3px 3px rgb(0 0 0 / 0.2);
+}
+
+body{
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.navbar {
+
+}
+
+.navbar .navbar-brand {
+    font-family: 'sacramento', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--pink);
+    text-shadow: var(--shadow);
+}
+
+.navbar img {
+    height: 40px;
+}
+
+.tentang{
+    min-height: 100vh;
+    background-color: red;
+}
+
+.produk{
+    min-height: 100vh;
+    background-color: yellow;
+}
+
+.kontak{
+    min-height: 100vh;
+    background-color: green;
+}
+
+.footer{
+    min-height: 20vh;
+    background-color: blue;
+}
