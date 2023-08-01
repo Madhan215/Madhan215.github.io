@@ -27,6 +27,10 @@
       href="../countdown/simplyCountdown.theme.default.css"
     />
     <script src="../countdown/simplyCountdown.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   </head>
   <body>
     <section
@@ -40,6 +44,85 @@
         <div class="simply-countdown"></div>
         <a href="#undangan" class="btn btn-lg mt-4">Lihat Undangan</a>
       </main>
+    </section>
+
+    <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">MdH invitation</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MdH invitation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#story">Story</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
+              <a class="nav-link" href="#rsvp">RSVP</a>
+              <a class="nav-link" href="#gifts">Gifts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2>Acara Pernikahan</h2>
+            <h3>Diselenggarakan pada 20 November 2023 di Banjarmasin, Kalimantan Selatan</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nihil nulla vero recusandae consequatur quae accusamus. Expedita maiores et atque officiis illo, illum asperiores vitae repellat, facere odit cum numquam cupiditate consequuntur nam quo nostrum? Harum esse ratione animi laboriosam dolores! Vel, ea sunt.</p>
+          </div>
+        </div>
+
+        <div class="row couple mt-5">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-8 text-end">
+                <h3>Cowok</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo adipisci dolores dicta.</p>
+                <p>Putra dari Bpk. Lorem <br> dan <br> Ibu Ipsum</p>
+              </div>
+              <div class="col-4">
+                <img src="../img/1.png" alt="Cowok" class="img-responsive rounded-circle">
+              </div>
+            </div>
+          </div>
+
+          <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-4">
+                <img src="../img/2.png" alt="Cewek" class="img-responsive rounded-circle">
+              </div>
+              <div class="col-8">
+                <h3>Cewek</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo adipisci dolores dicta.</p>
+                <p>Putra dari Bpk. Ipsum <br> dan <br> Ibu Lorem</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info" id="info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p class="alamat">Jl. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script
