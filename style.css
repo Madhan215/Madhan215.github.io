@@ -6,10 +6,11 @@
 body{
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
+    background-color: antiquewhite;
 }
 
 .navbar {
-
+    
 }
 
 .navbar .navbar-brand {
@@ -26,20 +27,33 @@ body{
 
 .tentang{
     min-height: 100vh;
-    background-color: red;
+    background-color: bisque;
+}
+
+.tentang h1{
+    font-family: 'charm';
+}
+
+.tentang .slogan{
+    font-family: 'charm';
+    font-weight: 400;
+}
+
+.tentang img {
+    height: 200px;
 }
 
 .produk{
     min-height: 100vh;
-    background-color: yellow;
+    background-color: bisque;
 }
 
 .kontak{
     min-height: 100vh;
-    background-color: green;
+    background-color: bisque;
 }
 
 .footer{
     min-height: 20vh;
-    background-color: blue;
+    background-color: bisque;
 }
