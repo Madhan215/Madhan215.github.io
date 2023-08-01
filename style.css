@@ -1,6 +1,6 @@
 :root {
-    --pink : #f14e95;
-    --shadow : 0 3px 3px rgb(0 0 0 / 0.2);
+    --orange : #C85103;
+    --shadow : 0 3px 3px rgba(255, 160, 105, 0.2);
 }
 
 body{
@@ -17,7 +17,7 @@ body{
     font-family: 'sacramento', cursive;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--pink);
+    color: var(--orange);
     text-shadow: var(--shadow);
 }
 
