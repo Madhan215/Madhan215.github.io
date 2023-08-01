@@ -168,7 +168,7 @@ body{
 /* mobile phone */
 @media (max-width: 576px) {
     html{
-        font-size: 80%;
+        font-size: 100%;
     }
     .navbar .nav-link {
         font-size: 3rem;
