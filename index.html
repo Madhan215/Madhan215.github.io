@@ -67,6 +67,7 @@
 
     <section class="tentang container pt-4 " id="tentang">
       <main>
+        <div id="demo"></div>
         <img class="rounded-circle mx-auto d-block shadow" src="img/iconMdH.ico" alt="" />
         <h1 class="text-center pt-4">Undangan Digital Website</h1>
         <p class="text-center slogan">Mudah, Cepat, Nyaman</p>
@@ -98,5 +99,9 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.getElementById("demo").innerHTML =
+"The full URL of this page is:<br>" + window.location.href;
+    </script>
   </body>
 </html>
