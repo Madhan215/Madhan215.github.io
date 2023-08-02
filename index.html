@@ -65,10 +65,14 @@
       </div>
     </nav>
 
-    <section class="tentang container pt-4 " id="tentang">
+    <section class="tentang container pt-4" id="tentang">
       <main>
-        <div id="demo"></div>
-        <img class="rounded-circle mx-auto d-block shadow" src="img/iconMdH.ico" alt="" />
+        <div id="tamu"></div>
+        <img
+          class="rounded-circle mx-auto d-block shadow"
+          src="img/iconMdH.ico"
+          alt=""
+        />
         <h1 class="text-center pt-4">Undangan Digital Website</h1>
         <p class="text-center slogan">Mudah, Cepat, Nyaman</p>
         <p>Buat undangan digital anda, sebarkan dengan praktis.</p>
@@ -80,8 +84,6 @@
         <h1 class="text-center pt-4">Produk</h1>
       </main>
     </section>
-
-    
 
     <section class="kontak container" id="kontak">
       <main>
@@ -99,9 +101,14 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Tamu Undangan -->
     <script>
-      document.getElementById("demo").innerHTML =
-"The full URL of this page is:<br>" + window.location.href;
+      const queryString = document.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const namatamu = urlParams.get("mengundang");
+
+      console.log(namatamu);
     </script>
   </body>
 </html>
