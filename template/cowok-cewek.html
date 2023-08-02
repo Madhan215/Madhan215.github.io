@@ -1,8 +1,3 @@
-<script type="text/javascript">
-  window.location.href = "cowok-cewek.html";
-</script>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,6 +39,7 @@
     >
       <main>
         <h4>Kepada Bapak/Ibu/Saudara/i,</h4>
+        <h4 id="tamu"></h4>
         <h1>Cowok & Cewek</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam</p>
         <div class="simply-countdown"></div>
@@ -154,5 +150,16 @@
         },
       });
     </script>
+
+    <!-- Getter nama tamu undangan -->
+    <script>
+      const queryString = document.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const namatamu = urlParams.get("mengundang");
+      var tamu = document.getElementById("tamu");
+      tamu.innerHTML = namatamu;
+    </script>
+
+
   </body>
 </html>
