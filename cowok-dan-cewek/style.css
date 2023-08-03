@@ -82,7 +82,7 @@ body{
     background-size: cover;
     min-height: 100vh;
     /* margin-top: -6.4rem; */
-    padding-top: 15rem;
+    padding-top: 5rem;
     padding-bottom: 5rem;
 }
 
@@ -100,7 +100,7 @@ body{
 }
 
 .home p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #666;
 }
 
@@ -110,7 +110,7 @@ body{
 
 .home .couple h3 {
     font-family: 'Sacramento', cursive;
-    font-size: 2.4rem;
+    font-size: 5rem;
     color: var(--pink);
 }
 
@@ -168,7 +168,7 @@ body{
 /* mobile phone */
 @media (max-width: 576px) {
     html{
-        font-size: 50%;
+        font-size: 70%;
     }
     .navbar .nav-link {
         font-size: 3rem;
