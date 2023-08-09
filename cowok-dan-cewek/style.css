@@ -326,6 +326,10 @@ body{
         width: 120px;
         height: 120px;
     }
+    .lokasi iframe{
+        height: 400px;
+        width: 500px;
+    }
 }
 
 /* mobile phone */
@@ -344,6 +348,10 @@ body{
     .timeline li .timeline-panel {
         width: 65%;
         transform: translateX(-20px)
+    }
+    .lokasi iframe{
+        height: 400px;
+        width: 400px;
     }
     
 }
