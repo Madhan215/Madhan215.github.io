@@ -90,7 +90,8 @@ body{
 .info h2, 
 .story h2, 
 .gallery h2, 
-.rsvp h2 {
+.rsvp h2,
+.lokasi h2 {
     color: var(--pink);
     font-family: 'Sacramento', cursive;
     font-size: 5rem;
@@ -180,9 +181,10 @@ body{
 }
 
 .story,
-.gallery {
+.gallery,
+.lokasi {
     padding-top: 10rem;
-    padding-bottom: 8rem;
+    padding-bottom: 3rem;
 }
 
 .story span,
@@ -265,6 +267,15 @@ body{
     float: right;
 }
 
+.gallery {
+    background-color: #f5f5f5;
+}
+
+.lokasi {
+    background-color: #f5f5f5;
+    padding: 1.5rem 0;
+}
+
 /* Media Query */
 
 /* Extra Large */
@@ -297,9 +308,7 @@ body{
     }
 }
 
-.gallery {
-    background-color: #f5f5f5;
-}
+
 
 /* tablet */
 @media (max-width: 768px) {
@@ -316,6 +325,10 @@ body{
     .timeline li .timeline-image {
         width: 120px;
         height: 120px;
+    }
+    .lokasi iframe{
+        height: 400px;
+        width: 500px;
     }
 }
 
@@ -335,6 +348,10 @@ body{
     .timeline li .timeline-panel {
         width: 65%;
         transform: translateX(-20px)
+    }
+    .lokasi iframe{
+        height: 400px;
+        width: 400px;
     }
     
 }
