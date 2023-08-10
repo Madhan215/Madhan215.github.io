@@ -36,6 +36,7 @@
 
   </head>
   <body>
+    
     <section
       id="hero"
       class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
@@ -78,9 +79,13 @@
     <audio id="lagu">
       <source src="../musik/Yovie Tulus Glenn - Adu Rayu (OFFICIAL LYRIC VIDEO).mp3">
     </audio>
+    <div class="play-pause btn sticky-top" id="play-pause">
+      <i class="bi bi-disc"></i>
+    </div>
 
     <section id="home" class="home">
       <div class="container">
+        
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
             <h2 data-aos="fade-up">Acara Pernikahan</h2>
@@ -360,18 +365,36 @@ AOS.init({
 
     <!-- Audio -->
     <script>
-      var x = document.getElementById("lagu");
+      var music = document.getElementById("lagu");
       var lihat = document.getElementById("lihat");
+      var play = document.getElementById("play-pause");
       lihat.addEventListener("click", playAudio);
 
       function playAudio() {
-        x.play();
+        music.play();
+        play.style.animation = "rotation 2s infinite linear";
       }
 
       function pauseAudio() {
-        x.pause();
+        music.pause();
+        play.style.animation = "none";
       }
+
+      // Use this code
+      
+
+      // Using arrow function here, dont get confused
+      play.addEventListener("click",()=>{
+        if(music.paused){
+          playAudio()
+        }
+        else{
+          pauseAudio()
+        }
+      })
     </script>
+
+    
 
 
   </body>
