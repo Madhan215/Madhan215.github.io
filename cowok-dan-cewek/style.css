@@ -131,9 +131,10 @@ body{
     background-color: white;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    position: absolute; 
+    position: absolute !important; 
     left: 50%;
     transform: translateX(-50%) translateY(65px);
+    z-index: 1;
 
 }
 
