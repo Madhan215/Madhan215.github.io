@@ -46,7 +46,7 @@
         <h1>Cowok & Cewek</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam</p>
         <div class="simply-countdown"></div>
-        <a href="#home" class="btn btn-lg mt-4">Lihat Undangan</a>
+        <a href="#home" class="btn btn-lg mt-4" id="lihat">Lihat Undangan</a>
       </main>
     </section>
 
@@ -74,6 +74,10 @@
         </div>
       </div>
     </nav> -->
+    
+    <audio id="lagu">
+      <source src="../musik/Yovie Tulus Glenn - Adu Rayu (OFFICIAL LYRIC VIDEO).mp3">
+    </audio>
 
     <section id="home" class="home">
       <div class="container">
@@ -129,7 +133,7 @@
           </div>
         </div>
 
-        <div class="row justify-content-center mt-4">
+        <div class="row justify-content-center mt-4"  data-aos="zoom-in">
           <div class="col-md-5 col-10">
             <div class="card text-center text-bg-light mb-4">
               <div class="card-header">
@@ -289,7 +293,7 @@
         <div class="row justify-content-center">
           <div class="col-10 text-center">
             <h2 class="mb-3" data-aos="fade-up">Lokasi Resepsi</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.2067974294123!2d114.58559614411355!3d-3.298920232571048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a3fb5f2659%3A0x75f1cc80aad78356!2sGedung%20Sultan%20Suriansyah!5e0!3m2!1sid!2sid!4v1691594010779!5m2!1sid!2sid" width="600px" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe  data-aos="zoom-in" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.2067974294123!2d114.58559614411355!3d-3.298920232571048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a3fb5f2659%3A0x75f1cc80aad78356!2sGedung%20Sultan%20Suriansyah!5e0!3m2!1sid!2sid!4v1691594010779!5m2!1sid!2sid" width="600px" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -352,6 +356,21 @@ AOS.init({
       console.log(namatamu);
       var tamu = document.getElementById("tamu");
       tamu.innerHTML = namatamu;
+    </script>
+
+    <!-- Audio -->
+    <script>
+      var x = document.getElementById("lagu");
+      var lihat = document.getElementById("lihat");
+      lihat.addEventListener("click", playAudio);
+
+      function playAudio() {
+        x.play();
+      }
+
+      function pauseAudio() {
+        x.pause();
+      }
     </script>
 
 

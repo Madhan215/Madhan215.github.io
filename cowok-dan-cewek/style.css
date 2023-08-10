@@ -309,7 +309,12 @@ body{
     }
 }
 
-
+/* Khusus */
+@media (max-width: 1008px) {
+    .home .heart {
+        display: none;
+    }
+}
 
 /* tablet */
 @media (max-width: 768px) {
