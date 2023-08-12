@@ -566,8 +566,7 @@ AOS.init({
 
       // Insert data ke database
       function InsertData(){
-        var waktu = new Date().getTime();
-        var title = "Tamu";
+        var waktu = new Date().getTime() / 1000;
       console.log(waktu);
         set(ref(db, 'undangan/' + nama.value), {
           waktu: waktu,
