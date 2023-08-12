@@ -303,6 +303,106 @@
         </div>
       </div>
     </section>
+
+    <section class="gift" id="gift">
+      <div class="container mb-5">
+        <div class="row justify-content-center">
+          <div class="col-10 text-center">
+            <h2 data-aos="fade-up">Gift</h2>
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+          </div>
+          <div class="row justify-content-center mt-4"  data-aos="zoom-in">
+            <div class="col-lg-5 col-md-7 col-10">
+              <div class="card" style="">
+                <img src="../img/bank/BNI.png" class="card-img-top img-fluid w-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">REK : <span id="rek1">12345 12345</span></h5>
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">Nama Cowok</p>
+                  <div class="tombol btn" id="tombol1"><i class="bi bi-clipboard"></i> Salin No Rek</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-4"  data-aos="zoom-in">
+            <div class="col-lg-5 col-md-7 col-10">
+              <div class="card" style="">
+                <img src="../img/bank/BCA.png" class="card-img-top img-fluid w-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">REK : <span id="rek2">000000</span></h5>
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">Nama Cowok</p>
+                  <div class="tombol btn" id="tombol2"><i class="bi bi-clipboard"></i> Salin No Rek</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center mt-4"  data-aos="zoom-in">
+            <div class="col-lg-5 col-md-7 col-10">
+              <div class="card" style="">
+                <img src="../img/bank/MANDIRI.png" class="card-img-top img-fluid w-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">REK : <span id="rek3">99999</span></h5>
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">Nama Cowok</p>
+                  <div class="tombol btn" id="tombol3"><i class="bi bi-clipboard"></i> Salin No Rek</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rsvp" id="rsvp">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col10 text-center">
+            <h2 data-aos="fade-up">RSVP</h2>
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+            <div class="row justify-content-center">
+
+              <div class="form-group col-5 text-center">
+                <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control" id="nama" name="nama" required><br>
+                </div>
+                <div class="form-group">
+                  <label for="pesan">pesan:</label>
+                  <textarea type="text" class="form-control" id="pesan" name="pesan" required></textarea><br>
+                </div>
+                <select name="status" id="status" class="form-control">
+                  <option value="Hadir">Hadir</option>
+                  <option value="tidak">Tidak</option>
+                  <option value="ragu">Ragu</option>
+                </select>
+                <button class="btn btn-light mt-3" id="kirim">Kirim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-5 text-center">
+            <div class="kolom mt-4" id="kolom">
+              <h2>Daftar Tamu</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Waktu</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Pesan</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="tabel">
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
    
 
@@ -393,6 +493,157 @@ AOS.init({
         }
       })
     </script>
+
+    <!-- Copy Gift -->
+    <script>
+        // Get the text field
+        var copyText1 = document.getElementById("rek1").innerHTML;
+        var copyText2 = document.getElementById("rek2").innerHTML;
+        var copyText3 = document.getElementById("rek3").innerHTML;
+
+        var tombol1 = document.getElementById("tombol1");
+        tombol1.addEventListener("click", salin1);
+
+        var tombol2 = document.getElementById("tombol2");
+        tombol2.addEventListener("click", salin2);
+
+        var tombol3 = document.getElementById("tombol3");
+        tombol3.addEventListener("click", salin3);
+      
+        function salin1(){
+          console.log("salin" + copyText1);
+          navigator.clipboard.writeText(copyText1);
+          alert("Nomor Rekening Telah Disalin");
+        }
+        function salin2(){
+          console.log("salin" + copyText2);
+          navigator.clipboard.writeText(copyText2);
+          alert("Nomor Rekening Telah Disalin");
+        }
+        function salin3(){
+          console.log("salin" + copyText3);
+          navigator.clipboard.writeText(copyText3);
+          alert("Nomor Rekening Telah Disalin");
+        }
+      </script>
+
+    <!-- Form RSVP -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBJSi6A34vIu9pwRfduNXrWmLkMyQxqdVc",
+        authDomain: "mdh-invitation.firebaseapp.com",
+        databaseURL: "https://mdh-invitation-default-rtdb.firebaseio.com",
+        projectId: "mdh-invitation",
+        storageBucket: "mdh-invitation.appspot.com",
+        messagingSenderId: "1061641982457",
+        appId: "1:1061641982457:web:ae96c109a665e90bc3ad28",
+        measurementId: "G-TYEX1ZPK9R"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      import { getDatabase, ref, set, push, get, child, onValue, update, remove } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+      const db = getDatabase();
+
+      // Get a reference to the database service
+      var nama = document.getElementById("nama");
+      var pesam = document.getElementById("pesan");
+      var status = document.getElementById("status");
+      
+
+      var kirim = document.getElementById("kirim");
+
+      // Insert data ke database
+      function InsertData(){
+        var waktu = new Date().getTime();
+        var title = "Tamu";
+      console.log(waktu);
+        set(ref(db, 'undangan/' + nama.value), {
+          waktu: waktu,
+          nama: nama.value,
+          pesan: pesam.value,
+          status: status.value
+        })
+        .then(() => {
+          alert('Terima Kasih Telah Mengisi Form');
+          nama.value = "";
+          pesam.value = "";
+          status.value = "";
+        })
+        .catch((error)=>{
+          alert('Error' + error);
+        });
+
+        window.location.reload();
+      }
+
+      // Trigger tombol kirim
+      kirim.addEventListener("click", InsertData);
+
+      // Read data dari database
+      let tabel = document.getElementById("tabel");
+
+      function AddItemToTable(waktu, nama, pesan, status){
+        console.log(nama, pesan, status);
+        console.log(tabel);
+        let row = document.createElement("tr");
+
+        var date = new Date(waktu * 1000).toLocaleDateString("id-ID", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+
+        var time = new Date(waktu * 1000).toLocaleTimeString("id-ID", {
+          hour: "numeric",
+          minute: "numeric",
+        });
+
+        row.innerHTML = `
+          <td>${date} ${time}</td>
+          <td>${nama}</td>
+          <td>${pesan}</td>
+          <td>${status}</td>
+        `;
+        tabel.appendChild(row);
+      }
+
+      function AddAllItemsToTable(data){
+        data.reverse()
+        data.forEach((item) => {
+          AddItemToTable(item.waktu, item.nama, item.pesan, item.status);
+        });
+      }
+
+      function GetAllDataOnce(){
+        const undangan = ref(db, 'undangan/');
+        get(undangan).then((snapshot) => {
+          if(snapshot.exists()){
+            const data = snapshot.val();
+            const dataArray = Object.values(data);
+            AddAllItemsToTable(dataArray);
+          }
+        }).catch((error) => {
+          console.error(error);
+        });
+      }
+
+      window.onload = GetAllDataOnce();
+
+
+    </script>
+      
 
     
 
