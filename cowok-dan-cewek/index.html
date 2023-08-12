@@ -96,7 +96,7 @@
 
         <div class="row couple mt-5">
           <div class="col-lg-6">
-            <div class="row" data-aos="fade-right">
+            <div class="row" data-aos="fade-up">
               <div class="col-8 text-end">
                 <h3>Cowok</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quo adipisci dolores dicta.</p>
@@ -111,7 +111,7 @@
           <span class="heart"><i class="bi bi-heart-fill"></i></span>
 
           <div class="col-lg-6">
-            <div class="row" data-aos="fade-left">
+            <div class="row" data-aos="fade-up">
               <div class="col-4">
                 <img src="../img/2.png" alt="Cewek" class="img-responsive rounded-circle">
               </div>
@@ -365,18 +365,22 @@
               <div class="form-group col-5 text-center">
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <input type="text" class="form-control" id="nama" name="nama" required><br>
+                  <input type="text" class="form-control mt-1" id="nama" name="nama" required><br>
                 </div>
                 <div class="form-group">
-                  <label for="pesan">pesan:</label>
-                  <textarea type="text" class="form-control" id="pesan" name="pesan" required></textarea><br>
+                  <label for="pesan">Doa dan ucapan</label>
+                  <textarea type="text" class="form-control mt-1" id="pesan" name="pesan" required></textarea><br>
                 </div>
-                <select name="status" id="status" class="form-control">
-                  <option value="Hadir">Hadir</option>
-                  <option value="tidak">Tidak</option>
-                  <option value="ragu">Ragu</option>
-                </select>
-                <button class="btn btn-light mt-3" id="kirim">Kirim</button>
+                <div class="form-group">
+                  <label for="pesan">RSVP</label>
+                  <select name="status" id="status" class="form-control mt-1">
+                    <option selected disabled>RSVP</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="tidak">Tidak</option>
+                    <option value="ragu">Ragu</option>
+                  </select>
+                </div>
+                <button class="btn mt-3" id="kirim">Kirim</button>
               </div>
             </div>
           </div>
@@ -563,12 +567,13 @@ AOS.init({
       
 
       var kirim = document.getElementById("kirim");
+      let tabel = document.getElementById("tabel");
 
       // Insert data ke database
       function InsertData(){
         var waktu = new Date().getTime() / 1000;
       console.log(waktu);
-        set(ref(db, 'undangan/' + nama.value), {
+        push(ref(db, 'undangan'), {
           waktu: waktu,
           nama: nama.value,
           pesan: pesam.value,
@@ -583,13 +588,19 @@ AOS.init({
         .catch((error)=>{
           alert('Error' + error);
         });
+
+        tabel.innerHTML = "";
+
+        GetAllDataOnce();
       }
 
       // Trigger tombol kirim
       kirim.addEventListener("click", InsertData);
 
       // Read data dari database
-      let tabel = document.getElementById("tabel");
+      
+
+      
 
       function AddItemToTable(waktu, nama, pesan, status){
         console.log(nama, pesan, status);
